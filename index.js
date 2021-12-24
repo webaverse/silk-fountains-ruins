@@ -39,7 +39,7 @@ export default () => {
                     }
                 });
     
-                console.log( `Silk Fountain 01 modelLoaded() -> ${ params.fileName } num verts: ` + numVerts );
+                //console.log( `Silk Fountain 01 modelLoaded() -> ${ params.fileName } num verts: ` + numVerts );
 
                 resolve( gltf.scene );     
             });
