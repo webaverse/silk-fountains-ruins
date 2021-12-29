@@ -25,9 +25,6 @@ export default () => {
                 let numVerts = 0;
     
                 gltf.scene.traverse( function ( child ) {
-
-                    const physicsId = physics.addGeometry( child );
-                    physicsIds.push( physicsId );
     
                     if ( child.isMesh ) {
     
@@ -54,13 +51,22 @@ export default () => {
         model => {
 
             let ruin1 = model.clone();
-            ruin1.position.set( 329, 5, 134 );
+            ruin1.position.set( 329, 4.6, 134 );
+
+            const physicsId1 = physics.addGeometry( ruin1 );
+            physicsIds.push( physicsId1 );
 
             let ruin2 = model.clone();
-            ruin2.position.set( -232, -1, -198 );
+            ruin2.position.set( -232, -1.45, -198 );
+
+            const physicsId2 = physics.addGeometry( ruin2 );
+            physicsIds.push( physicsId2 );
 
             let ruin3 = model.clone();
-            ruin3.position.set( -408, 20, 262 );
+            ruin3.position.set( -408, 18.75, 262 );
+
+            const physicsId3 = physics.addGeometry( ruin3 );
+            physicsIds.push( physicsId3 );
 
             app.add( ruin1, ruin2, ruin3 );
             
